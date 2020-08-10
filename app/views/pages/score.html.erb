@@ -1,0 +1,6 @@
+<h1>Your score</h1>
+<h2>You guessed <%= @answer %></h2>
+<%= @correct_answer? "You won" : "You loose "%>
+<%= @failure %>
+<h3>Your score is: <%=@score %></h3>
+<%= link_to "Make another game!", "new" %>

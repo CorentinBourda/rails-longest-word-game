@@ -1,0 +1,13 @@
+<h1>New game</h1>
+<div class="row justify-content-center">
+  <% @letters.each do |letter|%>
+    <p class="btn btn-primary col-1 mx-2"><%= letter%><p>
+  <% end %>
+
+<form class = "form-group row col-8"action="/score" method="post">
+  <input  class="form-control col-6"name = "answer"type="text" placeholder="Your longest word">
+  <input class="form-control col-6" type="submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :count_letters, @count_letters.to_json %>
+</form>
+</div>
